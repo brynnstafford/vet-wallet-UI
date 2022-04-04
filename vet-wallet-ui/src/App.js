@@ -1,12 +1,11 @@
-import './App.css';
-import HeaderSetup from "./HeaderSetup"
-import BodySetup from "./BodySetup"
+import React from "react"
+import Setup from "./components/Setup"
+
 
 function App() {
   return (
-    <div>
-      <HeaderSetup />
-      <BodySetup />
+    <div className="App">
+        <Setup />
     </div>
   );
 }
