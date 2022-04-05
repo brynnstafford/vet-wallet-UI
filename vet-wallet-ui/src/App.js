@@ -1,6 +1,5 @@
 import React from "react";
 import Setup from "./components/Setup";
-import Nav from "./components/Nav"
 import Home from "./components/Home";
 import AccountScreen from "./components/AccountScreen";
 import ConnectWallet from "./components/ConnectWallet";
@@ -24,7 +23,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Setup />} />
-        <Route path="/nav" element={<Nav />} />
         <Route path="/home" element={<Home />} />
         <Route path="/account-screen" element={<AccountScreen />} />
         <Route path="/connect-wallet" element={<ConnectWallet />} />
