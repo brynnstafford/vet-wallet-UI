@@ -23,13 +23,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Setup />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/account-screen" element={<AccountScreen />} />
-        <Route path="/connect-wallet" element={<ConnectWallet />} />
-        <Route path="/create-wallet" element={<CreateWallet />} />
-        <Route path="/seed-phrase" element={<SeedPhrase />} />
-        <Route path="/send" element={<Send />} />
-        <Route path="/txt-data" element={<TxtData />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/AccountScreen" element={<AccountScreen />} />
+        <Route path="/ConnectWallet" element={<ConnectWallet />} />
+        <Route path="/CreateWallet" element={<CreateWallet />} />
+        <Route path="/SeedPhrase" element={<SeedPhrase />} />
+        <Route path="/Send" element={<Send />} />
+        <Route path="/TxtData" element={<TxtData />} />
       </Routes>
     </Router>
   );

@@ -3,7 +3,9 @@ import React from "react";
 function ConnectWallet() {
     return(
         <div>
-            <h1>ConnectWallet!</h1>
+            <button className="back" onClick={window.location='./Setup'}> 
+                Back
+            </button>
         </div>
     );
 }
