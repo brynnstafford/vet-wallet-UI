@@ -9,7 +9,8 @@ export default function Setup() {
             </header>
 
             <div className="button-setup">
-                <button className="connect-wallet">
+    
+                <button className="connect-wallet" onClick= { () => window.location="./ConnectWallet"}>
                     <p>Connect Wallet</p>
                 </button>
 

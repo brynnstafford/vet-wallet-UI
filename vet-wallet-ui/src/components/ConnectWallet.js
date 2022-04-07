@@ -1,11 +1,13 @@
 import React from "react";
 
 function ConnectWallet() {
+
     return(
         <div>
-            <button className="back" onClick={window.location='./Setup'}> 
+            <button className="backBtn" onClick={ () => window.location='/'}> 
                 Back
             </button>
+            <h1>Connecto the Walleto!!!</h1>
         </div>
     );
 }
