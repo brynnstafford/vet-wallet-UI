@@ -29,9 +29,7 @@ export default function ConnectWallet() {
                 </button>
             </div>
 
-            <h2 className="seedphrase-link" onClick = {() => window.location = './SeedPhrase'}> import using seed phrase</h2>
-
-
+            <h2 className="seedphrase-link" onClick = {() => window.location = './SeedPhrase'}> import using private key</h2>
         </div>
     );
 }

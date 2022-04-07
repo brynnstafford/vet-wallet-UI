@@ -1,11 +1,13 @@
 import React from "react";
 
-function AccountScreen() {
-    return(
-        <div>
-            <h1>AccountScreen!</h1>
+export default function AccountScreen() {
+    return (
+        <div className="account-page">
+            <button className="cancel-btn" onClick={() => window.location = './Home'}>Cancel</button><br></br>
+            <div className="body-btns">
+                <button className="lock-btn" onClick={() => window.location = './'}>Lock</button><br></br>
+                <button className="settings-btn">Settings</button>
+            </div>
         </div>
     );
 }
-
-export default AccountScreen;

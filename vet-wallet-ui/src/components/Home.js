@@ -16,7 +16,7 @@ export default function Home() {
             <div className="balance">
                 <h2 className="balance-title">Balance:</h2>
                 <form className="balance-box">
-                    {/* create function to call backend and retrieve funds for account */}
+                    {/* create function to call backend getTotal() */}
                     <output><p className="balance-amt">$1,500.00</p></output>
                 </form>
                 <button className="send-btn" onClick={() => window.location = './Send'}>

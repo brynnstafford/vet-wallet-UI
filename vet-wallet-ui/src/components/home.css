@@ -33,7 +33,7 @@
 
     font-size: 18px;
     height: 85px;
-    background-color: black;
+    background-color: transparent;
     color: white;
     border-radius: 100px;
     border: 3px solid #22C1FD;
@@ -49,7 +49,8 @@
     height: 100px;
     width: 550px;
     background-color: #161619;
-    border: 3px groove #22C1FD;
+    border: 3px groove transparent;
+    border-radius: 6px;
 }
 
 .balance-title {
@@ -62,13 +63,13 @@
     margin: auto auto 30px 15px;
     height: 35px;
     width: 250px;
-    border: 3px solid black;
+    border: 3px solid transparent;
 }
 
 .balance-amt {
     text-align: left;
     margin: 8px auto auto 10px;
-    
+    color: white;
 }
 
 .send-btn {
@@ -97,4 +98,51 @@
     width: 550px;
     border-radius: 6px;
 
+}
+
+/* --------------------- ACCOUNT SCREEN ----------------------------------- */
+
+.account-page {
+    margin: auto;
+    width: 500px;
+    height: 900px;
+    background-color: #1A1B21;
+    border-radius: 10px;
+}
+
+.cancel-btn {
+    min-width: 200px;
+    background-color: transparent;
+    color: white;
+
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.body-btns {
+    margin-top: 300px;
+}
+
+.lock-btn {
+    min-width: 200px;
+    height: 60px;
+    background-color: transparent;
+    color: #22C1FD;
+  
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #22C1FD;
+}
+
+.settings-btn {
+    margin-top: 100px;
+    min-width: 200px;
+    height: 60px;
+    background-color: transparent;
+    color: #22C1FD;
+  
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #22C1FD;
 }
