@@ -1,13 +1,16 @@
+* {
+  font-family: 'Barlow', sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #23252C;
-  
 }
 
 .setup {
@@ -42,16 +45,31 @@ body {
 .connect-wallet {
   min-width: 200px;
   margin-bottom: 75px;
-  background-color: #D1D5DB;
-  color: #374151;
-  font-size: 14px;
+  background-color: transparent;
+
+  color: white;
+  font-size: 18px;
   border-radius: 10px;
+  border: 2px solid white;
 }
 
 .create-wallet {
   min-width: 200px;
-  background-color: #D1D5DB;
-  color: #374151;;
-  font-size: 14px;
+  background-color: transparent;
+  color: #22C1FD;
+
+  font-size: 18px;
   border-radius: 10px;
+  border: 2px solid #22C1FD;
+
+  box-shadow: none;
+  
+}
+
+.connect-wallet:hover {
+  opacity: 0.3;
+}
+
+.create-wallet:hover {
+  opacity: 0.3;
 }

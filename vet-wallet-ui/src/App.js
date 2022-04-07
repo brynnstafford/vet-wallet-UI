@@ -11,10 +11,7 @@ import TxtData from "./components/TxtData";
 import {
   BrowserRouter as Router, 
   Route, 
-  Routes,
-  Switch, 
-  Link, 
-  Redirect 
+  Routes
 } from "react-router-dom";
 
 
