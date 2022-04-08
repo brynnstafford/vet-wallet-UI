@@ -95,12 +95,14 @@
 
     background-color: rgb(85, 85, 85);
     max-height: 500px;
+    height: 490px;
     width: 550px;
     border-radius: 6px;
-
+    border: 2px solid white; 
+    border-style: solid solid none solid;
 }
 
-/* --------------------- ACCOUNT SCREEN ----------------------------------- */
+/* --------------------- ACCOUNT SCREEN ------------------------------ */
 
 .account-page {
     margin: auto;
@@ -111,7 +113,8 @@
 }
 
 .cancel-btn {
-    min-width: 200px;
+    margin: 30px 0px auto 350px;
+    width: 100px;
     background-color: transparent;
     color: white;
 
@@ -121,7 +124,7 @@
 }
 
 .body-btns {
-    margin-top: 300px;
+    margin-top: 250px;
 }
 
 .lock-btn {
@@ -146,3 +149,17 @@
     border-radius: 10px;
     border: 2px solid #22C1FD;
 }
+
+.cancel-btn:hover {
+    opacity: .3;
+}
+
+
+.lock-btn:hover {
+    opacity: .3;
+}
+
+.settings-btn:hover {
+    opacity: .3;
+}
+

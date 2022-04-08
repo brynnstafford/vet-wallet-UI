@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import './index.css';
 import './components/prereq.css'
 import './components/home.css'
+import './components/send.css'
 
-import App from './App';
-
+import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
