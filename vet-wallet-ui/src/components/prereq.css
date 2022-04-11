@@ -15,7 +15,6 @@ body {
   border-radius: 10px;
 }
 
-
 .backToSetup {
   margin: 10px 0px 50px 400px;
   height: 30px;
@@ -43,13 +42,12 @@ body {
   border: 2px solid white;
 }
 
-
 .unlock:hover {
   opacity: 0.3;
 }
 
 .connect-body {
-  margin-top: 100px;
+  margin-top: 020px;
   padding: 40px 0px 100px 0px;
 }
 
@@ -59,8 +57,7 @@ body {
 }
 
 .seedphrase-link {
-  margin: 220px auto 0px auto;
-
+  margin: 225px auto 0px auto;
   width: 300px;
   color: #22C1FD;
   background-color: transparent;

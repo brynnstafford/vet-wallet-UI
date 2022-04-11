@@ -20,7 +20,7 @@ export default function Home() {
                     <output><p className="balance-amt">$1,500.00</p></output>
                 </form>
                 <button className="send-btn" onClick={() => window.location = './Send'}>
-                    Send
+                    Send →
                 </button>
             </div>
 
@@ -30,10 +30,7 @@ export default function Home() {
                 <form className="tx-log">
                     {/* loop list of most recent transactions from server*/}
                     <output>individual log</output><br></br>
-                    <output>individual log</output><br></br>
-                    <output>individual log</output><br></br>
-                    <output>individual log</output><br></br>
-                    <output>individual log</output><br></br>
+                    
                 </form>
             </div>
         </div>

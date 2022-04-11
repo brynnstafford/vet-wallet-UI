@@ -7,13 +7,15 @@
 }
 
 .home-header {
+    background-color: #1e1e1f;
     display: flex;
     text-align: left;
     height: 95px;
     margin-top: 50px;
-    max-width: 450px;
-    border: 3px solid #22C1FD;
+    max-width: 600px;
+    border: 3px solid transparent;
     border-radius: 6px;
+    box-shadow: black;
 }
 
 .username {
@@ -29,14 +31,14 @@
 }
 
 .account-link {
-    margin: 10px 0px 50px 100px;
+    margin: 5px 0px 50px 100px;
 
     font-size: 18px;
     height: 85px;
     background-color: transparent;
     color: white;
     border-radius: 100px;
-    border: 3px solid #22C1FD;
+    border: 3px solid white;
 }
 
 .account-link:hover {
@@ -75,13 +77,15 @@
 .send-btn {
     height: 35px;
     width: 90px;
-    margin: 5px 5px;
-    text-align: left;
+    /* margin: 5px 5px; */
+    margin: 32px 5px;
+    text-align: center;
     padding-left: 10px;
+    font-size: 16px;
     color: white;
     background-color: transparent;
     border-radius: 6px;
-    border: 2px solid white;    
+    border: 2px solid #22C1FD;
 }
 
 .send-btn:hover {
@@ -93,12 +97,12 @@
     font-size: 30px;
     color: white;
 
-    background-color: rgb(85, 85, 85);
+    background-color: #161619;
     max-height: 500px;
     height: 490px;
     width: 550px;
     border-radius: 6px;
-    border: 2px solid white; 
+    border: 2px solid transparent; 
     border-style: solid solid none solid;
 }
 
@@ -131,11 +135,11 @@
     min-width: 200px;
     height: 60px;
     background-color: transparent;
-    color: #22C1FD;
+    color: white;
   
     font-size: 18px;
     border-radius: 10px;
-    border: 2px solid #22C1FD;
+    border: 2px solid white;
 }
 
 .settings-btn {

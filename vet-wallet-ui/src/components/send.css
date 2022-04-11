@@ -1,8 +1,52 @@
 .send-page {
     margin: auto;
+    /* padding-top: 20px; */
     width: 500px;
     height: 900px;
     background-color: #1A1B21;
     border-radius: 10px;
+    color: white;
 }
+
+.send-header {
+    background-color: #1e1e1f;
+    color: white;
+}
+
+.search {
+    display: flex;
+    padding-top: 50px;
+    /* margin: auto auto auto 100px; */
+    justify-content: center;
+}
+
+.address_search {
+    margin-left: 75px;
+}
+
+.submit-send {
+    margin-left: 25px;
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    border: 2px solid #22C1FD;
+    border-radius: 5px;
+}
+
+.submit-send:hover {
+    opacity: .3;
+}
+
+.recent {
+    margin-top: 200px;
+    padding-top: 10px;
+    font-size: 22px;
+
+    background-color: #161619;
+
+    height: 575px;
+    width: 500px;
+    border-radius: 6px;
+}
+
 

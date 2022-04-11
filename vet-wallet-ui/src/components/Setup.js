@@ -1,9 +1,12 @@
 import React from "react";
+// import Logo from "../VetWalletLogo.png"
+import Logo from "../vet-wallet-guy.png"
 
 export default function Setup() {
     return (
         <div className="setup">
             <header className="app-header">
+                <img className="logo" src={Logo} />
                 <p className="app-title">Vet wallet</p>
             </header>
 

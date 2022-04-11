@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../vet-wallet-guy.png"
 
 /* Need functionality to check against already logged in wallet i.e
 compare current input with password on file*/
@@ -7,13 +8,20 @@ function checkAndConnect() {
     window.location.assign('./Home');
 }
 
+
+// save input as variables
+// pass vairiables to API call
+// API call pass to CA backend
+
 export default function ConnectWallet() {
 
     return (
         <div className="connect-page">
             <header className="app-header">
+                <img className="logo" src={Logo} />
                 <p className="app-title">Vet wallet</p>
             </header>
+            
             <button className="backToSetup" onClick={() => window.location = '/'}>
                 Back
             </button>

@@ -22,16 +22,24 @@ body {
 }
 
 .app-header {
+  display: flex;
+  background-color: #161619;
+  margin-top: 20px;
   font-size: 42px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
 }
 
+.logo {
+  margin: 35px 0px 0px 45px;
+  height: 75px;
+  width: 75px;
+}
+
 .app-title {
-  margin: auto;
+  height: 50px;
   margin-top: 50px;
-  max-width: 500px;
-  border: 3px solid rgb(99, 87, 87);
+  width: 300px;
   border-radius: 6px;
 }
 
@@ -70,4 +78,70 @@ body {
 
 .create-wallet:hover {
   opacity: 0.3;
+}
+
+.create-page {
+  margin: auto;
+  width: 500px;
+  height: 900px;
+  background-color: #1A1B21;
+  border-radius: 10px;
+}
+
+.username-password {
+  justify-content: center;
+  color: white;
+}
+
+.password {
+  margin-left: 3px;
+}
+
+.create-wallet-text {
+  color: white;
+}
+
+.enrollAndRegister {
+  margin-top: 50px;
+  font-size: 18px;
+  height: 60px;
+  min-width: 200px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #22C1FD;
+  border: 2px solid #22C1FD;
+}
+
+
+/* -----------------------------Import Private Key-------------------- */
+.import-page {
+  margin: auto;
+  width: 500px;
+  height: 900px;
+  background-color: #1A1B21;
+  border-radius: 10px;
+}
+
+.keys {
+  justify-content: center;
+  color: white;
+}
+
+.private-key {
+  margin-left: 0px;
+}
+
+.create-wallet-pk {
+  color: white;
+}
+
+.connect-pk {
+  margin-top: 50px;
+  font-size: 18px;
+  height: 60px;
+  min-width: 200px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #22C1FD;
+  border: 2px solid #22C1FD;
 }
