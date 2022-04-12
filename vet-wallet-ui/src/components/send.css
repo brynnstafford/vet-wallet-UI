@@ -9,13 +9,33 @@
 }
 
 .send-header {
+    display: flex;
     background-color: #1e1e1f;
+    margin-top: 20px;
+    font-size: 42px;
     color: white;
+    justify-content: center;
+}
+
+.cancel-send-btn {
+    margin: 20px 0px 50px 400px;
+    height: 30px;
+    width: 80px;
+    background-color: transparent;
+    color: white;
+
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+.paste-text {
+    padding-top: 30px;
+    font-size: 24px;
 }
 
 .search {
     display: flex;
-    padding-top: 50px;
+    padding-top: 20px;
     /* margin: auto auto auto 100px; */
     justify-content: center;
 }
@@ -38,15 +58,13 @@
 }
 
 .recent {
-    margin-top: 200px;
+    margin-top: 100px;
     padding-top: 10px;
     font-size: 22px;
 
     background-color: #161619;
 
-    height: 575px;
+    height: 405px;
     width: 500px;
     border-radius: 6px;
 }
-
-

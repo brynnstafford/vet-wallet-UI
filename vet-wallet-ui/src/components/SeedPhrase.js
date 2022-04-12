@@ -9,7 +9,7 @@ function importKey() {
 }
 
 export default function SeedPhrase() {
-    return(
+    return (
         <div className="import-page">
             <header className="app-header">
                 <img className="logo" src={Logo} />
@@ -20,9 +20,10 @@ export default function SeedPhrase() {
                 Back
             </button>
 
-            <h1 className="connect-wallet-pk">Import wallet through private key</h1>
             <div className="connect-body-pk">
-                <h1>Import your private pictures here: </h1>
+                <h1 className="connect-wallet-pk-text">Import wallet through private key</h1>
+
+                <h1 className="import-pk-here">Import your private pictures here: </h1>
 
                 <form className="keys">
                     Private key: <input className='private-key' type="text" id="pw" /> <br></br>

@@ -120,23 +120,49 @@ body {
   height: 900px;
   background-color: #1A1B21;
   border-radius: 10px;
+
+  color: white;
 }
 
-.keys {
-  justify-content: center;
+.backToConnect {
+  margin: 10px 0px 50px 400px;
+  height: 30px;
+  width: 80px;
+  background-color: transparent;
   color: white;
+
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.backToConnect:hover {
+  opacity: .3;
+}
+
+.connect-body-pk {
+  font-size: 14px;
+}
+
+.import-pk-here {
+  margin-top: 150px;
 }
 
 .private-key {
   margin-left: 0px;
 }
 
-.create-wallet-pk {
+.connect-wallet-pk-text {
+  margin-top: 35px;
+}
+
+.keys {
+  margin-top: 25px;
+  justify-content: center;
   color: white;
 }
 
 .connect-pk {
-  margin-top: 50px;
+  margin-top: 100px;
   font-size: 18px;
   height: 60px;
   min-width: 200px;
@@ -144,4 +170,8 @@ body {
   background-color: transparent;
   color: #22C1FD;
   border: 2px solid #22C1FD;
+}
+
+.connect-pk:hover {
+  opacity: .3;
 }
