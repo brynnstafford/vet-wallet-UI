@@ -21,7 +21,7 @@ export default function Send() {
                 <p>Send to</p>
             </header>
 
-            <button className="cancel-send-btn" onClick={() => window.location = './Home'}>Cancel</button>
+            <button className="cancel-send-btn" onClick={() => window.location = './Home'}>Back</button>
             <p className="paste-text">Paste address here</p>
             <form className="search">
                 <input type="text" className="address_search" id="address_search" /> <br></br>
