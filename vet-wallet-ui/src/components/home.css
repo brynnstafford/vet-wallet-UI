@@ -31,7 +31,10 @@
 }
 
 .account-link {
-    margin: 5px 0px 50px 100px;
+    justify-content: right;
+    position: left;
+    
+    margin: 5px 0px 50px 10px;
 
     font-size: 18px;
     height: 85px;

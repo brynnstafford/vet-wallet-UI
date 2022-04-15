@@ -9,8 +9,18 @@ function recents() {
     // onClick() address will populate into the search box
 }
 
+const axios = require('axios');
+
 function sendBtn(address_search) {
     // submit address (in input box) to backend as param for ERC20 CC
+    axios({
+        method: 'post',
+        url: 'http://3.16.156.31:3000/user/api/v1/RequestTransfer',
+        data: {
+          fabricUserName: 'minter',
+          to: 'chron'
+        }
+      });
     return address_search;
 }
 
@@ -22,9 +32,11 @@ export default function Send() {
             </header>
 
             <button className="cancel-send-btn" onClick={() => window.location = './Home'}>Cancel</button>
-            <p className="paste-text">Paste address here</p>
+            <p className="paste-text">Paste User</p>
             <form className="search">
                 <input type="text" className="address_search" id="address_search" /> <br></br>
+                {/* <p>Enter amount</p> <br></br>
+                <input type="text" className="amount" id="amount" /> <br></br> */}
                 <button className="submit-send">Send →</button>
             </form>
 
