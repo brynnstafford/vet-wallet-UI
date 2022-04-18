@@ -28,29 +28,41 @@
     border: 2px solid white;
 }
 
-.paste-text {
-    padding-top: 30px;
+.cancel-send-btn:hover {
+    opacity: .3;
+}
+
+.recipient-info {
+    padding-top: 0px;
     font-size: 24px;
 }
 
-.search {
+.address_search {
     display: flex;
-    padding-top: 20px;
+    margin: auto;
+    width: 200px;
+    height: 30px;
     /* margin: auto auto auto 100px; */
     justify-content: center;
 }
 
-.address_search {
-    margin-left: 75px;
+.amount {
+    display: flex;
+    margin: -30px auto 0 auto;
+    width: 200px;
+    height: 30px;
+    /* margin: auto auto auto 100px; */
+    justify-content: center;
 }
 
+
 .submit-send {
-    margin-left: 25px;
     background-color: transparent;
     font-size: 16px;
     color: white;
     border: 2px solid #22C1FD;
     border-radius: 5px;
+    justify-content: center;
 }
 
 .submit-send:hover {

@@ -8,18 +8,15 @@ const walletSub = () => {
     // save input as variables
 
     // pass username and password params to API/backend
-
-
-    // axios({
-    //     method: 'post',
-    //     url: baseURL + 'registerAndEnrollUser',
-    //     data: {
-    //         fabricUserName: 'dio',
-    //         password: 'diopw'
-    //     }
-    // });
+    axios({
+        method: 'post',
+        url: baseURL + 'registerAndEnrollUser',
+        data: {
+            fabricUserName: 'ernesto',
+            password: 'ernestopw'
+        }
+    });
     // backend does stuff and creates account
-
 
     // connect account and go to home page
     alert('im doin stuff');
@@ -50,7 +47,7 @@ export default class UserInfo extends Component {
         return (
             <div className="create-page">
                 <header className="app-header">
-                    <img className="logo" src={Logo} />
+                    <img className="logo" src={Logo} alt="vet logo" />
                     <p className="app-title">Vet wallet</p>
                 </header>
 

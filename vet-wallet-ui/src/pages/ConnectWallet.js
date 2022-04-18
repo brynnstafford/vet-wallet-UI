@@ -29,7 +29,7 @@ export default class ConnectWallet extends Component{
         return (
             <div className="connect-page">
                 <header className="app-header">
-                    <img className="logo" src={Logo} />
+                    <img className="logo" src={Logo} alt="vet logo"/>
                     <p className="app-title">Vet wallet</p>
                 </header>
 

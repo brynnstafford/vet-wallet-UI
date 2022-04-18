@@ -1,5 +1,4 @@
 import React from "react";
-import { useLinkClickHandler } from "react-router-dom";
 
 // function displayTxInfo() {}
 // everytime specific transaction is clicked, pass tx id as params to backend
