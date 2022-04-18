@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './index.css';
-import './components/prereq.css'
-import './components/home.css'
-import './components/send.css'
+import './pages/prereq.css'
+import './pages/home.css'
+import './pages/send.css'
 
 import App from './App'
 
