@@ -1,12 +1,12 @@
 import React from "react";
-import Setup from "./components/Setup";
-import Home from "./components/Home";
-import AccountScreen from "./components/AccountScreen";
-import ConnectWallet from "./components/ConnectWallet";
-import CreateWallet from "./components/CreateWallet";
-import SeedPhrase from "./components/SeedPhrase";
-import Send from "./components/Send";
-import TxtData from "./components/TxtData";
+import Setup from "./pages/Setup";
+import Home from "./pages/Home";
+import AccountScreen from "./pages/AccountScreen";
+import ConnectWallet from "./pages/ConnectWallet";
+import CreateWallet from "./pages/CreateWallet";
+import SeedPhrase from "./pages/SeedPhrase";
+import Send from "./pages/Send";
+import TxtData from "./pages/TxtData";
 
 import {
   BrowserRouter as Router, 

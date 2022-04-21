@@ -12,7 +12,7 @@ export default function SeedPhrase() {
     return (
         <div className="import-page">
             <header className="app-header">
-                <img className="logo" src={Logo} />
+                <img className="logo" src={Logo} alt="vet logo"/>
                 <p className="app-title">Vet wallet</p>
             </header>
 
@@ -26,7 +26,7 @@ export default function SeedPhrase() {
                 <h1 className="import-pk-here">Import your private pictures here: </h1>
 
                 <form className="keys">
-                    Private key: <input className='private-key' type="text" id="pw" /> <br></br>
+                    Private key: <input className='private-key' type="file" id="pw" /> <br></br>
                 </form><br></br>
 
                 <button className="connect-pk" onClick={importKey}>
