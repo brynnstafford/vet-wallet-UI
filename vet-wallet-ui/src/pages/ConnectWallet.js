@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import Logo from "../vet-wallet-guy.png";
 
+
 /* Need functionality to check against already logged in wallet i.e
 compare current input with password on file*/
-function checkAndConnect() {
-    alert('checkin credentials');
-    window.location.assign('./Home');
-}
+
 
 // save input as variables
 // pass vairiables to API call
@@ -14,7 +12,15 @@ function checkAndConnect() {
 
 function ConnectWallet(){
     const [name, setName] = useState("");
-
+    function checkAndConnect() {
+        alert('checkin credentials: '+ name);
+        
+        window.location.assign('./Home');
+        
+    }
+    sessionStorage.setItem('name', name)
+    
+  
         return (
             <div className="connect-page">
                 <header className="app-header">
@@ -35,10 +41,10 @@ function ConnectWallet(){
                         name="name"
                         value={name}
                         onChange={e => setName(e.target.value)}
-                        /> <br></br>
+                        /> <br></br>  
                     </form>
-
-                    <button className="unlock" onClick={checkAndConnect} >
+                    
+                    <button className="unlock" onClick={checkAndConnect}>
                         Unlock
                     </button>
                 </div>

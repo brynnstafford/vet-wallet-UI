@@ -1,17 +1,19 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
+
 
 const axios = require('axios');
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
 async function showTotalBalance(){
-    let payload = { fabricUserName: 'chron'};
+    let payload = { fabricUserName: sessionStorage.getItem('name')};
     return await axios.post(baseURL + 'GetAccountBalance', payload)
 }
 
 
-function Home () {
-    const [valuepp, setValuepp] = useState();
+function Home()  {
+ 
 
+    const [valuepp, setValuepp] = useState();
         (async () => {
             let res = await showTotalBalance()
             let data = res;
@@ -41,8 +43,8 @@ function Home () {
                     <button className="send-btn" onClick={() => window.location = './Send'}>
                         Send →
                     </button>
-                </div>
-
+                </div> 
+    
                 <div className="history">
                     <h3>History</h3>
 
