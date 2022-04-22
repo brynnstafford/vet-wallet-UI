@@ -14,7 +14,7 @@ const sendBtn = () => {
             value: 10
         }
     });
-    alert('crunchin numbers');
+    alert('Transaction complete!');
     window.location.assign('./Home');
 }
 

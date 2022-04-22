@@ -19,8 +19,8 @@ const walletSub = () => {
     // backend does stuff and creates account
 
     // connect account and go to home page
-    alert('im doin stuff');
-    window.location.assign('./Home');
+    alert('Wallet Creation Complete!');
+    window.location.assign('./Setup');
 }
 
 export default class UserInfo extends Component {
@@ -84,9 +84,6 @@ export default class UserInfo extends Component {
                     <button className="enrollAndRegister" onClick={walletSub}>
                         Submit
                     </button>
-
-                    <p>{this.state.name}</p>
-                    <p>{this.state.pw}</p>
                 </div>
 
             </div>
