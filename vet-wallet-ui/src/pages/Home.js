@@ -5,7 +5,7 @@ const axios = require('axios');
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
 async function showTotalBalance(){
-    let payload = { fabricUserName: sessionStorage.getItem('name')};
+    let payload = { fabricUserName: sessionStorage.getItem('fabricUserName')};
     return await axios.post(baseURL + 'GetAccountBalance', payload)
 }
 

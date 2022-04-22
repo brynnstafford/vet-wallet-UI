@@ -18,7 +18,7 @@ function ConnectWallet(){
         window.location.assign('./Home');
         
     }
-    sessionStorage.setItem('name', name)
+    sessionStorage.setItem('fabricUserName', name)
     
   
         return (
