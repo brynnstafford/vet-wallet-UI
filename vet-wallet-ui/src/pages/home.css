@@ -18,6 +18,8 @@
     box-shadow: black;
 }
 
+.header-home-title {     margin-right: auto; }
+
 .username {
     font-size: 36px;
     color: white;

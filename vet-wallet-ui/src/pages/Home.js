@@ -3,6 +3,8 @@ const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
 function Home()  {
     const [value, setValue] = useState();
+    const [ID, setID] = useState("");
+    sessionStorage.setItem('fabricID', ID);
     (async () => {
         useEffect(()=>{
         fetch(baseURL + 'GetAccountBalance', {
@@ -19,13 +21,29 @@ function Home()  {
         // Setting balance value to response value
         .then(json => setValue(json));
             },[])
+            
+            useEffect(()=>{
+                fetch(baseURL + 'GetID', {
+                    method: "POST",
+                    body: JSON.stringify({
+                        fabricUserName: sessionStorage.getItem('fabricUserName')
+                    }),
+                    headers: {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                })
+                // Converting to JSON
+                .then(response => response.json())
+                // Setting balance value to response value
+                .then(json => setID(json));
+                    },[])
       })()
         return (
             <div className="home-page">
                 <header className="home-header">
-                    <div>
-                        <p className="username">{ }</p>
-                        <p className="address">0xs4mp134ddr355.....</p>
+                    <div className="header-home-title">
+                        <p className="username">{ sessionStorage.getItem('fabricUserName') }</p>
+                        <p className="address">{ sessionStorage.getItem('fabricID') }</p>
                     </div>
                     <button className="account-link" onClick={() => window.location = './AccountScreen'}>
                         Account

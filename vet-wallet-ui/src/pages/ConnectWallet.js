@@ -14,6 +14,7 @@ function ConnectWallet(){
     sessionStorage.setItem('fabricUserName', name)
     function checkAndConnect() {
         window.location.assign('./Home');
+        
     }
     
     useEffect(() => {
