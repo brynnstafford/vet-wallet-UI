@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../vet-wallet-guy.png";
-
 
 /* Need functionality to check against already logged in wallet i.e
 compare current input with password on file*/
@@ -12,14 +11,25 @@ compare current input with password on file*/
 
 function ConnectWallet(){
     const [name, setName] = useState("");
-    function checkAndConnect() {
-        alert('checkin credentials: '+ name);
-        
-        window.location.assign('./Home');
-        
-    }
     sessionStorage.setItem('fabricUserName', name)
+    function checkAndConnect() {
+        window.location.assign('./Home');
+    }
     
+    useEffect(() => {
+        const listener = event => {
+          if (event.code === "Enter" || event.code === "NumpadEnter") {
+            console.log("Enter key was pressed. Run your function.");
+            event.preventDefault();
+            checkAndConnect()
+          }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+          document.removeEventListener("keydown", listener);
+        };
+      }, []);
+
   
         return (
             <div className="connect-page">
