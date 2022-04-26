@@ -60,16 +60,6 @@ function Home()  {
                         Send →
                     </button>
                 </div> 
-    
-                <div className="history">
-                    <h3>History</h3>
-
-                    <form className="tx-log">
-                        {/* loop list of most recent transactions from server*/}
-                        <output>individual log</output><br></br>
-
-                    </form>
-                </div>
             </div>
         );  
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../vet-wallet-guy.png"
+import Logo from "../logo2.png"
 
 const axios = require('axios');
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';

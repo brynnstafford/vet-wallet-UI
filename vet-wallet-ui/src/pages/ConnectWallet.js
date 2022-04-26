@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../vet-wallet-guy.png";
+import Logo from "../logo2.png"
 
 /* Need functionality to check against already logged in wallet i.e
 compare current input with password on file*/

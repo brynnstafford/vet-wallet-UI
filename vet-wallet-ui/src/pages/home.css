@@ -10,7 +10,7 @@
     background-color: #1e1e1f;
     display: flex;
     text-align: left;
-    height: 95px;
+    height: 125px;
     margin-top: 50px;
     max-width: 600px;
     border: 3px solid transparent;
@@ -122,7 +122,7 @@
 }
 
 .cancel-btn {
-    margin: 30px 0px auto 350px;
+    margin: 60px 0px auto 250px;
     width: 100px;
     background-color: transparent;
     color: white;
@@ -170,4 +170,13 @@
 
 .settings-btn:hover {
     opacity: .3;
+}
+
+.account-screen-header {
+    display: flex;
+    margin: auto;
+    justify-content: baseline;
+    background-color: #161619;
+    color: white;
+    padding-bottom: 25px;
 }

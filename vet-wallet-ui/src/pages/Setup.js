@@ -1,6 +1,6 @@
 import React from "react";
-// import Logo from "../VetWalletLogo.png"
-import Logo from "../vet-wallet-guy.png"
+import Logo from "../logo2.png"
+
 
 export default function Setup() {
     return (

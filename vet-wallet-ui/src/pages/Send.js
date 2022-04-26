@@ -54,12 +54,6 @@ function Send() {
                         Send →
                     </button>
                 </div>
-
-                <div className="recent">
-                    <form>
-                        <h4 className="recent-title">Recents</h4>
-                    </form>
-                </div>
             </div>
         );
 }
