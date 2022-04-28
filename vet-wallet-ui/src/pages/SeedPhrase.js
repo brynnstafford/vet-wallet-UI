@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../vet-wallet-guy.png"
+import Logo from "../logo2.png"
 
 function importKey() {
     // import key file
@@ -23,7 +23,7 @@ export default function SeedPhrase() {
             <div className="connect-body-pk">
                 <h1 className="connect-wallet-pk-text">Import wallet through private key</h1>
 
-                <h1 className="import-pk-here">Import your private pictures here: </h1>
+                <h1 className="import-pk-here">Import your private key here: </h1>
 
                 <form className="keys">
                     Private key: <input className='private-key' type="file" id="pw" /> <br></br>

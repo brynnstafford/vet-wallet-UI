@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
+
 function Home()  {
     const [value, setValue] = useState();
     const [ID, setID] = useState("");
-    sessionStorage.setItem('fabricID', ID);
+
     (async () => {
         useEffect(()=>{
         fetch(baseURL + 'GetAccountBalance', {
@@ -33,17 +34,21 @@ function Home()  {
                     }
                 })
                 // Converting to JSON
-                .then(response => response.json())
-                // Setting balance value to response value
-                .then(json => setID(json));
+                .then(response => {response.text().then(function (text) {
+                    setID(text)
+                  });})
+                .catch(e => {
+                    console.log(e);
+                });
                     },[])
       })()
+      
         return (
             <div className="home-page">
                 <header className="home-header">
                     <div className="header-home-title">
                         <p className="username">{ sessionStorage.getItem('fabricUserName') }</p>
-                        <p className="address">{ sessionStorage.getItem('fabricID') }</p>
+                        <p className="address">{ ID }</p>
                     </div>
                     <button className="account-link" onClick={() => window.location = './AccountScreen'}>
                         Account
@@ -60,6 +65,16 @@ function Home()  {
                         Send →
                     </button>
                 </div> 
+    
+                <div className="history">
+                    <h3>History</h3>
+
+                    <form className="tx-log">
+                        {/* loop list of most recent transactions from server*/}
+                        <output>individual log</output><br></br>
+
+                    </form>
+                </div>
             </div>
         );  
 }
