@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../logo2.png"
 
-const axios = require('axios');
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
 
@@ -9,24 +8,40 @@ function CreateWallet() {
 
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
-    const walletSub = () => {
-        // save input as variables
     
-        // pass username and password params to API/backend
-        axios({
-            method: 'post',
-            url: baseURL + 'registerAndEnrollUser',
-            data: {
-                fabricUserName: name,
-                password: password
+    function walletSub() {
+        return new Promise(function (resolve, reject) {
+            fetch(baseURL + 'registerAndEnrollUser', {
+                method: "POST",
+                body: JSON.stringify({
+                    fabricUserName: name,
+                    password: password
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+            // Converting to JSON
+            .then((response) => {
+                var result = response.text();
+                resolve(result);
+            },
+            (error) => {
+                reject(error)
             }
-        });
-        // backend does stuff and creates account
-    
-        // connect account and go to home page
-        alert('Wallet Creation Complete!');
-        window.location.assign('/');
+            );
+        })
     }
+
+    async function onChangeFunction() {
+        let result = await walletSub();
+        console.log(result);
+    if(result === "Wallet Exists"){
+        alert("Wallet creation failed, Wallet already exists");
+    }else{
+        alert("Wallet creation complete. Login on the connect wallet page.")
+    }
+}
 
     return (
         <div className="create-page">
@@ -65,7 +80,7 @@ function CreateWallet() {
                     <br></br>
                 </form><br></br>
 
-                <button className="enrollAndRegister" onClick={walletSub}>
+                <button className="enrollAndRegister" onClick={onChangeFunction}>
                     Submit
                 </button>
             </div>
