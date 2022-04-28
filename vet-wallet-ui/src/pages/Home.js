@@ -3,8 +3,9 @@ const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
 
 
 function Home()  {
-    const [value, setValue] = useState();
+    const [Balance, setBalance] = useState();
     const [ID, setID] = useState("");
+    sessionStorage.setItem('userBalance', Balance);
 
     (async () => {
         useEffect(()=>{
@@ -20,7 +21,7 @@ function Home()  {
         // Converting to JSON
         .then(response => response.json())
         // Setting balance value to response value
-        .then(json => setValue(json));
+        .then(json => setBalance(json));
             },[])
             
             useEffect(()=>{
@@ -59,7 +60,7 @@ function Home()  {
                     <h2 className="balance-title">Balance:</h2>
                     <form className="balance-box">
                         {/* create function to call backend getTotal() */}
-                        <output><p className="balance-amt">{value}</p></output>
+                        <output><p className="balance-amt">{Balance}</p></output>
                     </form>
                     <button className="send-btn" onClick={() => window.location = './Send'}>
                         Send →

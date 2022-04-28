@@ -23,7 +23,13 @@ function Send() {
     const [amount, setAmount] = useState();
 
     const sendBtn = () => {
+        if(amount > 0 && amount < parseInt(sessionStorage.getItem('userBalance'))){
         SendFunds(to, amount)
+        }else if (amount > parseInt(sessionStorage.getItem('userBalance'))){
+            alert('Not enough funds');
+        }else{
+            alert('Input a positive number');
+        }
     }
 
         return (
