@@ -2,13 +2,63 @@ import React, { useState } from "react";
 import Logo from "../logo2.png"
 
 const baseURL = 'http://3.16.156.31:3000/user/api/v1/';
+const transferURL = 'http://3.16.156.31:3000/fabric/api/v1/';
 
 
 function CreateWallet() {
 
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
-    
+
+    function initAccount1() {
+        return new Promise(function (resolve, reject) {
+            fetch(transferURL + 'RequestTransfer', {
+                method: "POST",
+                body: JSON.stringify({
+                    fabricUserName: name,
+                    to: "trashMan",
+                    value: 1
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+                // Converting to JSON
+                .then((response) => {
+                    var result = response.text();
+                    resolve(result);
+                },
+                    (error) => {
+                        reject(error)
+                    }
+                );
+        })
+    }
+
+    function initAccount() {
+        return new Promise(function (resolve, reject) {
+            fetch(baseURL + 'Mint', {
+                method: "POST",
+                body: JSON.stringify({
+                    fabricUserName: name,
+                    amount: 1
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+                // Converting to JSON
+                .then((response) => {
+                    var result = response.text();
+                    resolve(result);
+                },
+                    (error) => {
+                        reject(error)
+                    }
+                );
+        })
+    }
+
     function walletSub() {
         return new Promise(function (resolve, reject) {
             fetch(baseURL + 'registerAndEnrollUser', {
@@ -21,28 +71,30 @@ function CreateWallet() {
                     "Content-type": "application/json; charset=UTF-8"
                 }
             })
-            // Converting to JSON
-            .then((response) => {
-                var result = response.text();
-                resolve(result);
-            },
-            (error) => {
-                reject(error)
-            }
-            );
+                // Converting to JSON
+                .then((response) => {
+                    var result = response.text();
+                    resolve(result);
+                },
+                    (error) => {
+                        reject(error)
+                    }
+                );
         })
     }
 
     async function onChangeFunction() {
         let result = await walletSub();
         console.log(result);
-    if(result === "Wallet Exists"){
-        alert("Wallet creation failed, Wallet already exists");
-    }else{
-        alert("Wallet creation complete. Login on the connect wallet page.")
-        
+        if (result === "Wallet Exists") {
+            alert("Wallet creation failed, Wallet already exists");
+        } else {
+            alert("Creating wallet... Please wait at least 5 seconds")
+            await initAccount();
+            await initAccount1();
+            alert("Wallet creation complete. Account initialized")
+        }
     }
-}
 
     return (
         <div className="create-page">

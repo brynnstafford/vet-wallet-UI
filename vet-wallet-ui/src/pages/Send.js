@@ -23,12 +23,14 @@ function Send() {
     const [amount, setAmount] = useState();
 
     const sendBtn = () => {
-        if(amount > 0 && amount < parseInt(sessionStorage.getItem('userBalance'))){
-        SendFunds(to, amount)
+        if(amount < 0){
+            alert('Input a positive number');
+        }else if(sessionStorage.getItem('fabricUserName') === to){
+            alert('No money duplication glitches here')
         }else if (amount > parseInt(sessionStorage.getItem('userBalance'))){
             alert('Not enough funds');
         }else{
-            alert('Input a positive number');
+            SendFunds(to, amount)
         }
     }
 
