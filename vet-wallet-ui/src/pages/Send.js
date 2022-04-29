@@ -41,7 +41,7 @@ function Send() {
                 <button className="cancel-send-btn" onClick={() => window.location = './Home'}>Back</button>
 
                 <div className="recipient-info">
-                    <p className="paste-text">Enter Who you want to send to!: </p>
+                    <p className="paste-text">Enter who you want to send to: </p>
                     <form className="search">
                         <input type="text" 
                         className="address_search" 

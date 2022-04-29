@@ -40,6 +40,7 @@ function CreateWallet() {
         alert("Wallet creation failed, Wallet already exists");
     }else{
         alert("Wallet creation complete. Login on the connect wallet page.")
+        
     }
 }
 

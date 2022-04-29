@@ -112,6 +112,10 @@ body {
   border: 2px solid #22C1FD;
 }
 
+.enrollAndRegister:hover {
+  opacity: .3;
+}
+
 
 /* -----------------------------Import Private Key-------------------- */
 .import-page {

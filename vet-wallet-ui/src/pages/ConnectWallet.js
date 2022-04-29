@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../logo2.png"
 
-/* Need functionality to check against already logged in wallet i.e
-compare current input with password on file*/
-
-
-// save input as variables
-// pass vairiables to API call
-// API call pass to CA backend
-
 function ConnectWallet(){
     const [name, setName] = useState("");
     sessionStorage.setItem('fabricUserName', name)
+
     function checkAndConnect() {
         window.location.assign('./Home');
         
@@ -60,7 +53,7 @@ function ConnectWallet(){
                     </button>
                 </div>
 
-                <h2 className="seedphrase-link" onClick={() => window.location = './SeedPhrase'}> import using private key</h2>
+                {/* <h2 className="seedphrase-link" onClick={() => window.location = './SeedPhrase'}> import using private key</h2> */}
             </div>
         );
     }
